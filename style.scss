@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+$Linear-Gradient: #a3a8f0 to #696fdd;
+$Very-Light-Grayish-Blue: #f6f6fe;
+$Light-Grayish-Blue: #b3b5c6;
+$Grayish-Blue: #6d708d;
+$Dark-Grayish-Blue: #494c5f;
+
+$fFamily: "Montserrat", sans-serif;
+$fSize: 15px;
+
+body {
+  font-family: $fFamily;
+  font-size: $fSize;
+  background-color: $Very-Light-Grayish-Blue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  text-align: center;
+
+  h1 {
+    color: $Grayish-Blue;
+    font-size: 3rem;
+  }
+}
+
+.toggle {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  p {
+    color: $Light-Grayish-Blue;
+    font-size: 1.5rem;
+  }
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  display: none;
+
+  &:checked + label {
+    background: linear-gradient($Light-Grayish-Blue, $Light-Grayish-Blue);
+  }
+
+  &:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+}
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(#a3a8f0, #696fdd);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: $Very-Light-Grayish-Blue;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+
+  &:active:after {
+    width: 50px;
+  }
+}
+
+.pricing {
+  border: red solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: $Grayish-Blue;
+  }
+  p {
+    color: $Dark-Grayish-Blue;
+    font-size: 4rem;
+  }
+  ul {
+    display: grid;
+    flex-direction: column;
+    height: 10vh;
+    margin: 0 auto;
+    list-style: none;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    border: solid 1px rgb(155, 155, 155);
+    border-bottom-color: rgb(197, 194, 194);
+  }
+}

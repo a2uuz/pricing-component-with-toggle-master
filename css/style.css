@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  background-color: #f6f6fe;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main h1 {
+  color: #6d708d;
+  font-size: 3rem;
+}
+
+.toggle {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.toggle p {
+  color: #b3b5c6;
+  font-size: 1.5rem;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  display: none;
+}
+input[type=checkbox]:checked + label {
+  background: linear-gradient(#b3b5c6, #b3b5c6);
+}
+input[type=checkbox]:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(#a3a8f0, #696fdd);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #f6f6fe;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+label:active:after {
+  width: 50px;
+}
+
+.pricing {
+  border: red solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pricing h2 {
+  color: #6d708d;
+}
+.pricing p {
+  color: #494c5f;
+  font-size: 4rem;
+}
+.pricing ul {
+  display: grid;
+  flex-direction: column;
+  height: 10vh;
+  margin: 0 auto;
+  list-style: none;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  border: solid 1px rgb(155, 155, 155);
+  border-bottom-color: rgb(197, 194, 194);
+}/*# sourceMappingURL=style.css.map */
